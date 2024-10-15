@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
+import { FileUploader } from '@aws-amplify/ui-react-storage';
+import '@aws-amplify/ui-react/styles.css';
 
 const client = generateClient<Schema>();
 
@@ -33,6 +35,12 @@ function App() {
           Review next step of this tutorial.
         </a>
       </div>
+      <FileUploader
+        acceptedFileTypes={['image/*']}
+        path={({ identityId }) => `protected/${identityId}/`}
+        maxFileCount={1}
+        isResumable
+      />
     </main>
   );
 }
