@@ -1,4 +1,4 @@
-/*const awsmobile = {
+const awsmobile = {
     Auth: {
         // Amazon Cognito Identity Pool ID
         identityPoolId: 'ap-south-1:7b6c74c1-8061-45e0-954b-69fefaec1cf3',
@@ -21,22 +21,3 @@
 };
 
 export default awsmobile;
-*/
-
-const awsConfig = {
-    Auth: {
-      region: "ap-south-1",
-      userPoolId: "ap-south-1_Zx1QczjyB",
-      userPoolWebClientId: "66jl20gbehm24bnsume9f2mavd",
-      oauth: {
-        domain: "https://fileuploader.auth.ap-south-1.amazoncognito.com",
-        scope: ["email", "profile", "openid"],
-        redirectSignIn: "http://localhost:5173/",
-        redirectSignOut: "http://localhost:5173/",
-        responseType: "code" // or "token", depending on your setup
-      }
-    }
-  };
-  
-  export default awsConfig;
-  
